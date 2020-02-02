@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: 'test_dependency.gradle'
+apply from: 'android_dependency.gradle'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.lab.news"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation supportDependencies.values()
+    implementation kotlinDependencies.values()
+    implementation koinDependencies.values()
+    implementation lifecycleDependencies.values()
+    implementation coroutinesDependencies.values()
+    implementation testDependecies.values()
+    implementation retrofitDependencies.values()
+    implementation roomDependencies.values()
+    implementation glideDependencies.values()
+    kapt roomKart.values()
+}

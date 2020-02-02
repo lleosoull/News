@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="title_card_news">Titulo do Anucio</string>
+    <string name="description_card_news">Descrição</string>
+    <string name="url_card_news">Fonte</string>
+    <string name="date_card_news">Data</string>
+
+    <string name="error_api">Por favor verifique sua conexão ou tente mais tarde</string>
+    <string name="future_message">Logo irá ter mais!</string>
+</resources>

@@ -1,0 +1,11 @@
+ext {
+    def junitVersion = '4.12'
+    def extVersion = '1.1.1'
+    def espressoVersion = '3.2.0'
+
+    testDependecies = [
+            junit       : "junit:junit:$junitVersion",
+            extJunit    : "androidx.test.ext:junit:$extVersion",
+            espressoCode: "androidx.test.espresso:espresso-core:$espressoVersion"
+    ]
+}
